@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <head> -->
+      <%- include('header'); -%>
+
+	<!-- </head> -->
+    <!-- <nav> -->
+      <%- include('nav'); -%>
+    <!-- END nav -->
+
+
+    <div class="container">
+        <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <% datalist.forEach(function(person) { %>
+                <tr>
+         
+                    <td><%= person.name %></td>
+                    <td><%= person.email %></td>
+                    <td><%= person.password %></td>
+                    <td>
+                      <a href="/index" onclick="return confirm('are you sure to delete ?')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                    </td>
+           
+                </tr>
+
+              <% }); %>
+
+<!-- 
+              <% for(var i=0; i < datalist.length; i++) { %>
+                <tr>
+         
+                  <td><%= datalist[i].name %></td>
+                  <td><%= datalist[i].email %></td>
+                  <td><%= datalist[i].password %></td>
+         
+         
+                </tr>
+             <% } %> -->
+
+               
+
+            </tbody>
+          </table>
+
+    </div>
+    
+
+
+
+    <!-- END section -->
+
+      <!-- <footer> -->
+          <%- include('footer'); -%>
+      <!-- </footer> -->
+
+    <!-- loader -->
+    <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#1d82ff"/></svg></div>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</html>
